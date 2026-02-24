@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - OUEDRAOGO YOUSSOUF</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-code"></i> OY Portfolio
+            </div>
+            <ul class="nav-links">
+                <li><a href="#accueil" class="active">Accueil</a></li>
+                <li><a href="#a-propos">À Propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Accueil / Hero -->
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Salut, je suis <span class="highlight">OUEDRAOGO YOUSSOUF</span></h1>
+                <p class="subtitle">Étudiant en Informatique | Spécialisé en Programmation</p>
+                <p class="description">Passionné par le développement logiciel et les nouvelles technologies. 
+                   Je crée des solutions innovantes et performantes.</p>
+                <div class="cta-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="avatar-wrapper">
+                    <div class="avatar">
+                        <img src="avatar.jpg" alt="Avatar de OUEDRAOGO YOUSSOUF" class="avatar-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Statistiques -->
+    <section class="dashboard-stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>15+</h3>
+                    <p>Projets Complétés</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>8+</h3>
+                    <p>Langages Maîtrisés</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>10+</h3>
+                    <p>Technologies Utilisées</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>100%</h3>
+                    <p>Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jeu Interactif - Memory Game -->
+    <section class="game-section">
+        <div class="container">
+            <h2>🎮 Jeu Interactif - Trouvez les Paires</h2>
+            <p class="game-description">Testez votre mémoire ! Cliquez sur les cartes pour trouver les paires correspondantes.</p>
+            
+            <div class="game-container">
+                <div class="game-stats">
+                    <div class="game-stat">
+                        <span class="label">Mouvements :</span>
+                        <span class="value" id="moves">0</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="label">Paires trouvées :</span>
+                        <span class="value" id="matches">0</span>
+                    </div>
+                    <div class="game-stat">
+                        <span class="label">Temps :</span>
+                        <span class="value" id="timer">0s</span>
+                    </div>
+                </div>
+
+                <div class="memory-grid" id="memoryGrid"></div>
+
+                <div class="game-controls">
+                    <button class="btn btn-primary" id="resetBtn">🔄 Recommencer</button>
+                    <button class="btn btn-secondary" id="easyBtn">Facile (8 cartes)</button>
+                    <button class="btn btn-secondary" id="hardBtn">Difficile (16 cartes)</button>
+                </div>
+
+                <div class="game-message" id="gameMessage"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="a-propos" class="about">
+        <div class="container">
+            <h2>À Propos de Moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Qui suis-je ?</h3>
+                    <p>Je suis OUEDRAOGO YOUSSOUF, étudiant passionné en informatique avec une spécialisation 
+                       en programmation. Je suis motivé à développer mes compétences techniques et à créer 
+                       des applications web et mobiles innovantes.</p>
+                    
+                    <h3 class="mt-20">Formation</h3>
+                    <ul class="formation-list">
+                        <li>
+                            <strong>Licence en Informatique</strong>
+                            <p>Spécialité : Programmation</p>
+                            <p class="gray">En cours</p>
+                        </li>
+                    </ul>
+
+                    <h3 class="mt-20">Objectifs</h3>
+                    <ul class="goals-list">
+                        <li><i class="fas fa-check-circle"></i> Devenir un développeur Full Stack compétent</li>
+                        <li><i class="fas fa-check-circle"></i> Contribuer à des projets open-source</li>
+                        <li><i class="fas fa-check-circle"></i> Travailler sur des solutions d'impact social</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="info-card">
+                        <div class="info-item">
+                            <span class="label">Localisation</span>
+                            <span class="value">Burkina Faso</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Email</span>
+                            <span class="value">youssouf@email.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Disponibilité</span>
+                            <span class="value">À partir de 2026</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Expérience</span>
+                            <span class="value">Étudiante/Débutant</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="skills">
+        <div class="container">
+            <h2>Compétences</h2>
+            
+            <div class="skills-grid">
+                <!-- Langages de Programmation -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Langages de Programmation</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                            <span class="skill-level">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Java</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-level">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                            <span class="skill-level">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">PHP</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-level">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technologies Web -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Technologies Web</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">HTML5 & CSS3</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                            <span class="skill-level">95%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">pplatforme.net</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                            <span class="skill-level">55%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">laravel</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                            <span class="skill-level">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Django</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 55%"></div>
+                            </div>
+                            <span class="skill-level">55%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bases de Données & Outils -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de Données & Outils</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <div class="skill-name">MySQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                            <span class="skill-level">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">MongoDB</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 50%"></div>
+                            </div>
+                            <span class="skill-level">50%</span>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <div class="skill-name">Linux & Terminal</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                            <span class="skill-level">80%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compétences Transversales -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-brain"></i> Compétences Transversales</h3>
+                    <div class="badges">
+                        <span class="badge">Résolution de Problèmes</span>
+                        <span class="badge">Travail en Équipe</span>
+                        <span class="badge">Gestion de Projets</span>
+                        <span class="badge">Communication</span>
+                        <span class="badge">Apprentissage Continu</span>
+                        <span class="badge">Créativité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="projects">
+        <div class="container">
+            <h2>Mes Projets</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Platform</h3>
+                    <p>Plateforme de commerce électronique complète avec panier, paiement et gestion d'utilisateurs.</p>
+                    <div class="project-tech">
+                        
+                        <span class="tech-badge">PHP dur </span>
+                        <span class="tech-badge">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management App</h3>
+                    <p>Application de vente de vehicule </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">php dur </span>
+                        <span class="tech-badge">Mysql</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Weather Forecast App</h3>
+                    <p>Application gestion des etudiant .</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Laravel</span>
+
+                        <span class="tech-badge">Mysql</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Blog Platform</h3>
+                    <p>Plateforme de blog avec éditeur riche, commentaires et système de catégories.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">PHP</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Social Network</h3>
+                    <p>Réseau social avec profils, messages privés, notifications et fil d'actualité.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">Spring Boot</span>
+                        <span class="tech-badge">PostgreSQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Streaming Platform</h3>
+                    <p>Plateforme de streaming vidéo avec lecteur adaptatif et recommandations.</p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">FastAPI</span>
+                        <span class="tech-badge">React</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">
+                            <i class="fas fa-code-branch"></i> Code
+                        </a>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i> Démo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Me Contacter</h2>
+            <p class="contact-intro">Vous avez une question ou une opportunité ? N'hésitez pas à me contacter !</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href="mailto:odgyous0102@email.com">odgyous0102@email.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+22604355876">+226 04 35 58 76</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localisation</h3>
+                            <p>Ouagadougou, Burkina Faso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Votre Nom" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Votre Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Votre Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Envoyer le Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <h3>Suivez-moi</h3>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 OUEDRAOGO YOUSSOUF. Tous les droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

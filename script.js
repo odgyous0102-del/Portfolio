@@ -44,6 +44,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Theme Switcher (Color Palette)
+    const themes = [
+        { primary: '#00f3ff', secondary: '#9d4edd', accent: '#ff00ea' }, // Cyan/Purple (Default)
+        { primary: '#00ff87', secondary: '#60efff', accent: '#0061ff' }, // Green/Blue
+        { primary: '#ff00ea', secondary: '#ff7300', accent: '#fadb5f' }, // Pink/Orange
+        { primary: '#ff0055', secondary: '#0066ff', accent: '#00ffcc' }  // Red/Blue
+    ];
+    let currentThemeIndex = 0;
+    
+    const themeBtn = document.getElementById('theme-btn');
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            currentThemeIndex = (currentThemeIndex + 1) % themes.length;
+            const theme = themes[currentThemeIndex];
+            
+            document.documentElement.style.setProperty('--primary-neon', theme.primary);
+            document.documentElement.style.setProperty('--secondary-neon', theme.secondary);
+            document.documentElement.style.setProperty('--accent-neon', theme.accent);
+            
+            // Add a small animation to the button
+            themeBtn.style.transform = 'scale(1.2) rotate(180deg)';
+            setTimeout(() => {
+                themeBtn.style.transform = '';
+            }, 300);
+        });
+    }
+
     // Form submission
     const form = document.querySelector('.contact-form form');
     if (form) {
@@ -223,12 +250,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Dark mode toggle (optional enhancement)
+// Light/Dark mode toggle
 const addDarkModeToggle = () => {
-    const darkModeToggle = localStorage.getItem('darkMode') === 'true';
+    const darkModeBtn = document.getElementById('dark-mode-btn');
+    const isLightMode = localStorage.getItem('lightMode') === 'true';
     
-    if (darkModeToggle) {
-        document.body.classList.add('dark-mode');
+    // Set initial state
+    if (isLightMode) {
+        document.body.classList.add('light-mode');
+        if (darkModeBtn) darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+    
+    if (darkModeBtn) {
+        darkModeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            const isLight = document.body.classList.contains('light-mode');
+            
+            // Update icon
+            darkModeBtn.innerHTML = isLight ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+            
+            // Add animation
+            darkModeBtn.style.transform = 'scale(1.2) rotate(360deg)';
+            setTimeout(() => {
+                darkModeBtn.style.transform = '';
+            }, 300);
+            
+            // Save preference
+            localStorage.setItem('lightMode', isLight);
+        });
     }
 };
 

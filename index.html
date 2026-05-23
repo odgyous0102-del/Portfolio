@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - OUEDRAOGO YOUSSOUF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -15,11 +20,14 @@
                 <i class="fas fa-code"></i> OY Portfolio
             </div>
             <ul class="nav-links">
+                <li><a href="#experiences">Expériences</a></li>
                 <li><a href="#accueil" class="active">Accueil</a></li>
                 <li><a href="#a-propos">À Propos</a></li>
                 <li><a href="#competences">Compétences</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="dark-mode-btn" class="theme-btn" title="Mode Sombre / Clair"><i class="fas fa-sun"></i></button></li>
+                <li><button id="theme-btn" class="theme-btn" title="Changer de thème"><i class="fas fa-palette"></i></button></li>
             </ul>
         </div>
     </nav>
@@ -30,8 +38,8 @@
             <div class="hero-text">
                 <h1>Salut, je suis <span class="highlight">OUEDRAOGO YOUSSOUF</span></h1>
                 <p class="subtitle">Étudiant en Informatique | Spécialisé en Programmation</p>
-                <p class="description">Passionné par le développement logiciel et les nouvelles technologies. 
-                   Je crée des solutions innovantes et performantes.</p>
+                <p class="description">Passionné par le développement logiciel et les nouvelles technologies.
+                    Je crée des solutions innovantes et performantes.</p>
                 <div class="cta-buttons">
                     <a href="#projets" class="btn btn-primary">Voir mes projets</a>
                     <a href="#contact" class="btn btn-secondary">Me contacter</a>
@@ -40,7 +48,7 @@
             <div class="hero-image">
                 <div class="avatar-wrapper">
                     <div class="avatar">
-                        <img src="avatar.jpg" alt="Avatar de OUEDRAOGO YOUSSOUF" class="avatar-img">
+                        <img src="avatar.JPG" alt="Avatar de OUEDRAOGO YOUSSOUF" class="avatar-img">
                     </div>
                 </div>
             </div>
@@ -87,8 +95,9 @@
     <section class="game-section">
         <div class="container">
             <h2>🎮 Jeu Interactif - Trouvez les Paires</h2>
-            <p class="game-description">Testez votre mémoire ! Cliquez sur les cartes pour trouver les paires correspondantes.</p>
-            
+            <p class="game-description">Testez votre mémoire ! Cliquez sur les cartes pour trouver les paires
+                correspondantes.</p>
+
             <div class="game-container">
                 <div class="game-stats">
                     <div class="game-stat">
@@ -125,17 +134,32 @@
             <div class="about-content">
                 <div class="about-text">
                     <h3>Qui suis-je ?</h3>
-                    <p>Je suis OUEDRAOGO YOUSSOUF, étudiant passionné en informatique avec une spécialisation 
-                       en programmation. Je suis motivé à développer mes compétences techniques et à créer 
-                       des applications web et mobiles innovantes.</p>
-                    
+                    <p>Je suis OUEDRAOGO YOUSSOUF, étudiant passionné en informatique avec une spécialisation
+                        en programmation. Je suis motivé à développer mes compétences techniques et à créer
+                        des applications web et mobiles innovantes.</p>
+
                     <h3 class="mt-20">Formation</h3>
                     <ul class="formation-list">
                         <li>
-                            <strong>Licence en Informatique</strong>
-                            <p>Spécialité : Programmation</p>
-                            <p class="gray">En cours</p>
+                            <strong>Institut Modern Athena de San-Pedro</strong><br>
+                            BEPC, 2017-2018
                         </li>
+                        <li>
+                            <strong>Lycée Modern Inagohi de San-Pedro</strong><br>
+                            BAC D, 2021-2022
+                        </li>
+                        <li>
+                            <strong>Licence 3, Technologie du Génie Informatique</strong><br>
+                            2025-2026
+                        </li>
+                    </ul>
+                    <h3 class="mt-20">Compétences acquises</h3>
+                    <ul class="competences-list">
+                        <li>Algorithmique</li>
+                        <li>Développement Web</li>
+                        <li>POO</li>
+                        <li>Base de données</li>
+                        <li>Réseaux</li>
                     </ul>
 
                     <h3 class="mt-20">Objectifs</h3>
@@ -161,7 +185,7 @@
                         </div>
                         <div class="info-item">
                             <span class="label">Expérience</span>
-                            <span class="value">Étudiante/Débutant</span>
+                            <span class="value">Étudiant / Débutant</span>
                         </div>
                     </div>
                 </div>
@@ -173,127 +197,77 @@
     <section id="competences" class="skills">
         <div class="container">
             <h2>Compétences</h2>
-            
+
             <div class="skills-grid">
-                <!-- Langages de Programmation -->
+                <!-- Langages -->
                 <div class="skill-category">
-                    <h3><i class="fas fa-laptop-code"></i> Langages de Programmation</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">Python</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                            <span class="skill-level">90%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">JavaScript</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                            <span class="skill-level">85%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Java</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-level">80%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">C++</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
-                            <span class="skill-level">75%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">PHP</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-level">80%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technologies Web -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Technologies Web</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">HTML5 & CSS3</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                            <span class="skill-level">95%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">pplatforme.net</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%"></div>
-                            </div>
-                            <span class="skill-level">55%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">laravel</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 70%"></div>
-                            </div>
-                            <span class="skill-level">70%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Django</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 55%"></div>
-                            </div>
-                            <span class="skill-level">55%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bases de Données & Outils -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Bases de Données & Outils</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-name">MySQL</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                            <span class="skill-level">85%</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">MongoDB</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 50%"></div>
-                            </div>
-                            <span class="skill-level">50%</span>
-                        </div>
-                        
-                        <div class="skill-item">
-                            <div class="skill-name">Linux & Terminal</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-level">80%</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Compétences Transversales -->
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Compétences Transversales</h3>
+                    <h3><i class="fas fa-code"></i> Langages</h3>
                     <div class="badges">
-                        <span class="badge">Résolution de Problèmes</span>
-                        <span class="badge">Travail en Équipe</span>
-                        <span class="badge">Gestion de Projets</span>
-                        <span class="badge">Communication</span>
-                        <span class="badge">Apprentissage Continu</span>
-                        <span class="badge">Créativité</span>
+                        <span class="badge">PHP</span>
+                        <span class="badge">Python</span>
+                        <span class="badge">JavaScript</span>
+                        <span class="badge">C#</span>
+                        <span class="badge">HTML/CSS</span>
+                    </div>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group"></i> Frameworks</h3>
+                    <div class="badges">
+                        <span class="badge">Laravel</span>
+                        <span class="badge">Next.js</span>
+                        <span class="badge">Spring Boot</span>
+                    </div>
+                </div>
+
+                <!-- Bases de données -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-database"></i> Bases de données</h3>
+                    <div class="badges">
+                        <span class="badge">MySQL</span>
+                        <span class="badge">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Outils -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Outils</h3>
+                    <div class="badges">
+                        <span class="badge">Git / GitHub</span>
+                        <span class="badge">Visual Studio Code</span>
+                        <span class="badge">Visual Studio</span>
+                    </div>
+                </div>
+
+                <!-- Méthodes -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-project-diagram"></i> Méthodes</h3>
+                    <div class="badges">
+                        <span class="badge">MVC</span>
+                        <span class="badge">POO</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+    <!-- Section Expériences -->
+    <section id="experiences" class="experiences">
+        <div class="container">
+            <h2>Expériences</h2>
+            <h3>Projets personnels</h3>
+            <ul class="experience-list">
+                <li>Application Web : Création d’un système de gestion de véhicules (CRUD complet, authentification, base de
+                    données).</li>
+                <li>Développement d’une plateforme web de recrutement permettant la gestion des offres d’emploi, des
+                    candidatures et des utilisateurs (admin, recruteur, candidat) avec Laravel, MySQL et JavaScript.
+                </li>
+            </ul>
+            <h3>Projets collectifs</h3>
+            <ul class="experience-list">
+                <li>Application Web et application Java : Création d’un système de gestion immobilière (CRUD complet,
+                    authentification, base de données).</li>
+            </ul>
         </div>
     </section>
 
@@ -301,7 +275,7 @@
     <section id="projets" class="projects">
         <div class="container">
             <h2>Mes Projets</h2>
-            
+
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
@@ -310,8 +284,7 @@
                     <h3>E-Commerce Platform</h3>
                     <p>Plateforme de commerce électronique complète avec panier, paiement et gestion d'utilisateurs.</p>
                     <div class="project-tech">
-                        
-                        <span class="tech-badge">PHP dur </span>
+                        <span class="tech-badge">PHP Natif</span>
                         <span class="tech-badge">MySQL</span>
                     </div>
                     <div class="project-links">
@@ -326,13 +299,13 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-tasks"></i>
+                        <i class="fas fa-car"></i>
                     </div>
-                    <h3>Task Management App</h3>
-                    <p>Application de vente de vehicule </p>
+                    <h3>Vehicle Tracking System</h3>
+                    <p>Application de vente de véhicules.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">php dur </span>
-                        <span class="tech-badge">Mysql</span>
+                        <span class="tech-badge">PHP Natif</span>
+                        <span class="tech-badge">MySQL</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -346,14 +319,13 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-user-graduate"></i>
                     </div>
-                    <h3>Weather Forecast App</h3>
-                    <p>Application gestion des etudiant .</p>
+                    <h3>Student Management Application</h3>
+                    <p>Application de gestion des étudiants.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">Laravel</span>
-
-                        <span class="tech-badge">Mysql</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">MySQL</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -367,10 +339,10 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-book"></i>
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Blog Platform</h3>
-                    <p>Plateforme de blog avec éditeur riche, commentaires et système de catégories.</p>
+                    <h3>Recruitment Platform</h3>
+                    <p>Plateforme de recrutement avec éditeur riche, commentaires et système de catégories.</p>
                     <div class="project-tech">
                         <span class="tech-badge">PHP</span>
                         <span class="tech-badge">MySQL</span>
@@ -388,14 +360,14 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-user-friends"></i>
+                        <i class="fas fa-user-group"></i>
                     </div>
                     <h3>Social Network</h3>
                     <p>Réseau social avec profils, messages privés, notifications et fil d'actualité.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">Java</span>
-                        <span class="tech-badge">Spring Boot</span>
-                        <span class="tech-badge">PostgreSQL</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Bootstrap</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -409,14 +381,14 @@
 
                 <div class="project-card">
                     <div class="project-header">
-                        <i class="fas fa-video"></i>
+                        <i class="fas fa-user-tie"></i>
                     </div>
-                    <h3>Video Streaming Platform</h3>
-                    <p>Plateforme de streaming vidéo avec lecteur adaptatif et recommandations.</p>
+                    <h3>RecrutePro</h3>
+                    <p>Plateforme de recrutement complète et moderne.</p>
                     <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">FastAPI</span>
-                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Laravel</span>
+                        <span class="tech-badge">MySQL</span>
+                        <span class="tech-badge">Bootstrap</span>
                     </div>
                     <div class="project-links">
                         <a href="#" class="project-link">
@@ -436,7 +408,7 @@
         <div class="container">
             <h2>Me Contacter</h2>
             <p class="contact-intro">Vous avez une question ou une opportunité ? N'hésitez pas à me contacter !</p>
-            
+
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
@@ -497,4 +469,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
